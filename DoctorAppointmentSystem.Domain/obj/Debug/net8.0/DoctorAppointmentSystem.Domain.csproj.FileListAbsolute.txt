@@ -1,0 +1,12 @@
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\bin\Debug\net8.0\DoctorAppointmentSystem.Domain.deps.json
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\bin\Debug\net8.0\DoctorAppointmentSystem.Domain.dll
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\bin\Debug\net8.0\DoctorAppointmentSystem.Domain.pdb
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\DoctorAppointmentSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\DoctorAppointmentSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\DoctorAppointmentSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\DoctorAppointmentSystem.Domain.AssemblyInfo.cs
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\DoctorAppointmentSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\DoctorAppointmentSystem.Domain.dll
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\refint\DoctorAppointmentSystem.Domain.dll
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\DoctorAppointmentSystem.Domain.pdb
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Domain\obj\Debug\net8.0\ref\DoctorAppointmentSystem.Domain.dll

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DoctorAppointmentSystem.Application/DoctorAppointmentSystem.Application.csproj" />
+  <Project Path="DoctorAppointmentSystem.Domain/DoctorAppointmentSystem.Domain.csproj" />
+  <Project Path="DoctorAppointmentSystem.Infrastructure/DoctorAppointmentSystem.Infrastructure.csproj" />
+  <Project Path="DoctorAppointmentSystem.WebAPI/DoctorAppointmentSystem.WebAPI.csproj" />
+</Solution>

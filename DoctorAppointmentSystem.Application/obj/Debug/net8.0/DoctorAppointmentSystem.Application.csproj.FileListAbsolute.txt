@@ -1,0 +1,17 @@
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\bin\Debug\net8.0\DoctorAppointmentSystem.Application.deps.json
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\bin\Debug\net8.0\DoctorAppointmentSystem.Application.runtimeconfig.json
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\bin\Debug\net8.0\DoctorAppointmentSystem.Application.dll
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\bin\Debug\net8.0\DoctorAppointmentSystem.Application.pdb
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\bin\Debug\net8.0\DoctorAppointmentSystem.Domain.dll
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\bin\Debug\net8.0\DoctorAppointmentSystem.Domain.pdb
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.csproj.AssemblyReference.cache
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.AssemblyInfoInputs.cache
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.AssemblyInfo.cs
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.csproj.CoreCompileInputs.cache
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAp.D7092D07.Up2Date
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.dll
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\refint\DoctorAppointmentSystem.Application.dll
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.pdb
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\DoctorAppointmentSystem.Application.genruntimeconfig.cache
+C:\Users\Aakash Kalathoor\Desktop\DoctorAppointmentSystem\DoctorAppointmentSystem.Application\obj\Debug\net8.0\ref\DoctorAppointmentSystem.Application.dll

@@ -1,0 +1,92 @@
+# ============================================================
+# .gitignore for DoctorAppointmentSystem (.NET 8 / ASP.NET Core)
+# ============================================================
+
+# ----- Build output -----
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+out/
+
+# ----- NuGet -----
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ----- .NET / MSBuild internals -----
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.rsuser
+
+# ----- Test results & coverage -----
+TestResults/
+[Cc]overage*/
+*.trx
+*.coveragexml
+*.coverage
+
+# ----- Rider / ReSharper -----
+.idea/
+_ReSharper*/
+*.DotSettings.user
+*.resharper
+
+# ----- Visual Studio -----
+.vs/
+*.VC.db
+*.VC.VC.opendb
+*.sdf
+*.opensdf
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opt
+*.pdb          # keep source, exclude build artefacts (handled by bin/ above)
+
+# ----- ASP.NET Core / secrets -----
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+secrets.json
+**/Properties/launchSettings.json
+
+# ----- Entity Framework migrations (generated, optional) -----
+# Uncomment the next line if you want to exclude EF migration snapshots:
+# **/Migrations/
+
+# ----- Logs -----
+logs/
+*.log
+*.log.*
+
+# ----- OS generated -----
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----- Docker -----
+.dockerignore
+docker-compose.override.yml
+
+# ----- Environment / CI -----
+.env
+.env.*
+!.env.example
