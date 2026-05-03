@@ -1,0 +1,93 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  DOTNET_VERSION: '8.0.x'
+  WEBAPP_NAME: 'doctorappointmentapi'
+  AZURE_SUBSCRIPTION: 'YourAzureServiceConnection'
+
+stages:
+
+# CI stage - build and publish artifacts
+- stage: Build
+  displayName: 'Build Stage'
+
+  jobs:
+  - job: BuildJob
+    displayName: 'Restore, Build and Publish'
+
+    steps:
+
+    # Install .NET SDK
+    - task: UseDotNet@2
+      displayName: 'Install .NET SDK'
+      inputs:
+        packageType: 'sdk'
+        version: '$(DOTNET_VERSION)'
+
+    # Restore NuGet packages
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore Packages'
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+
+    # Build project
+    - task: DotNetCoreCLI@2
+      displayName: 'Build Project'
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration)'
+
+    # Publish project
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish Project'
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+        zipAfterPublish: true
+
+    # Publish artifact to Azure DevOps
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Build Artifact'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+
+
+# cd stage - deploy to azure
+- stage: Deploy
+  displayName: 'Deploy Stage'
+  dependsOn: Build
+  condition: succeeded()
+
+  jobs:
+  - deployment: DeployWebApp
+    displayName: 'Deploy to Azure App Service'
+    environment: 'production'
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+
+          # Download artifact from Build stage
+          - download: current
+            artifact: drop
+
+          # Deploy artifact to Azure Web App
+          - task: AzureWebApp@1
+            displayName: 'Deploy Web App'
+            inputs:
+              azureSubscription: '$(AZURE_SUBSCRIPTION)'
+              appType: 'webApp'
+              appName: '$(WEBAPP_NAME)'
+              package: '$(Pipeline.Workspace)/drop/**/*.zip'
