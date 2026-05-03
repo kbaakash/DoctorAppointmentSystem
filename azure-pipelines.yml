@@ -10,7 +10,7 @@ variables:
   buildConfiguration: 'Release'
   DOTNET_VERSION: '8.0.x'
   WEBAPP_NAME: 'doctorappointmentapi'
-  AZURE_SUBSCRIPTION: 'YourAzureServiceConnection'
+  AZURE_SUBSCRIPTION: 'Azure subscription 1'
 
 stages:
 
