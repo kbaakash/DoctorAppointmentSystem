@@ -22,8 +22,6 @@ namespace DoctorAppointmentSystem.WebAPI.Controller
            var token =await AuthService.LoginAsync(dto);
             return Ok(token);
         }
-         
-        
         [HttpPost("register-patient")]
         public async Task<IActionResult> Register(RegisterPatientDto dto)
         {

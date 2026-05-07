@@ -1,10 +1,5 @@
 ﻿using DoctorAppointmentSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DoctorAppointmentSystem.Infrastructure.Data
 {
@@ -15,7 +10,6 @@ namespace DoctorAppointmentSystem.Infrastructure.Data
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Slot> Slots { get; set; }
         public DbSet<User> Users { get; set; }
-
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
@@ -24,23 +18,16 @@ namespace DoctorAppointmentSystem.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            // =========================
-            // USER CONFIGURATION
-            // =========================
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
 
-            // Optional (Recommended) - store enum as string
+            // Optional -store enum as string
             modelBuilder.Entity<User>()
                 .Property(u => u.Role)
                 .HasConversion<string>();
 
-
-            // =========================
             // DOCTOR <-> USER (1:1)
-            // =========================
             modelBuilder.Entity<Doctor>()
                 .HasOne(d => d.User)
                 .WithOne(u => u.Doctor)
@@ -51,10 +38,7 @@ namespace DoctorAppointmentSystem.Infrastructure.Data
                 .HasIndex(d => d.UserId)
                 .IsUnique();
 
-
-            // =========================
             // PATIENT <-> USER (1:1)
-            // =========================
             modelBuilder.Entity<Patient>()
                 .HasOne(p => p.User)
                 .WithOne(u => u.Patient)
@@ -65,10 +49,7 @@ namespace DoctorAppointmentSystem.Infrastructure.Data
                 .HasIndex(p => p.UserId)
                 .IsUnique();
 
-
-            // =========================
             // APPOINTMENT RELATIONSHIPS
-            // =========================
 
             // Appointment → Doctor
             modelBuilder.Entity<Appointment>()
@@ -90,11 +71,6 @@ namespace DoctorAppointmentSystem.Infrastructure.Data
                 .WithMany(s => s.Appointments)
                 .HasForeignKey(a => a.SlotId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-
-            // =========================
-            // BUSINESS RULES
-            // =========================
 
             // Prevent double booking
             modelBuilder.Entity<Appointment>()
