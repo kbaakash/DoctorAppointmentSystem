@@ -1,7 +1,3 @@
-# ============================================================
-#  Dockerfile — DoctorAppointmentSystem (.NET 8 / ASP.NET Core)
-# ============================================================
-
 # ── Stage 1: Publish ────────────────────────────────────────
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
