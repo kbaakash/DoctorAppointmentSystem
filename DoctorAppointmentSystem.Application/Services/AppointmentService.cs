@@ -2,12 +2,6 @@
 using DoctorAppointmentSystem.Application.Interfaces;
 using DoctorAppointmentSystem.Domain.Entities;
 using DoctorAppointmentSystem.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace DoctorAppointmentSystem.Application.Services
 {
     public class AppointmentService:IAppointmentService
@@ -69,7 +63,6 @@ namespace DoctorAppointmentSystem.Application.Services
         public async Task<List<AppointmentDto>> GetPatientAppointments(Guid patientId)
         {
             var appointments = await AppointmentRepository.GetByPatientId(patientId);
-
             return appointments.Select(a => new AppointmentDto
             {
                 AppointmentId = a.Id,
@@ -83,7 +76,6 @@ namespace DoctorAppointmentSystem.Application.Services
         public async Task<List<AppointmentDto>> GetDoctorAppointments(Guid doctorId)
         {
             var appointments = await AppointmentRepository.GetByDoctorId(doctorId);
-
             return appointments.Select(a => new AppointmentDto
             {
                 AppointmentId = a.Id,

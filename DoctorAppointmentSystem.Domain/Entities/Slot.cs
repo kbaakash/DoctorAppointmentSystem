@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DoctorAppointmentSystem.Domain.Entities
+﻿namespace DoctorAppointmentSystem.Domain.Entities
 {
     public class Slot
     {

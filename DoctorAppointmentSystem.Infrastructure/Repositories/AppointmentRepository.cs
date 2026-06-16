@@ -2,12 +2,6 @@
 using DoctorAppointmentSystem.Domain.Entities;
 using DoctorAppointmentSystem.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace DoctorAppointmentSystem.Infrastructure.Repositories
 {
@@ -31,13 +25,11 @@ namespace DoctorAppointmentSystem.Infrastructure.Repositories
                 .Select(x => x.SlotId)
                 .ToListAsync();
         }
-
         public async Task<bool> IsSlotBooked(Guid doctorId, DateTime date, int slotId)
         {
             return await Context.Appointments
                 .AnyAsync(x => x.DoctorId == doctorId && x.Date.Date == date.Date && x.SlotId == slotId);
         }
-
         public async Task AddAsync(Appointment appointment)
         {
             await Context.Appointments.AddAsync(appointment);

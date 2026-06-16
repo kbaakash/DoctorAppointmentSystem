@@ -1,10 +1,4 @@
 ﻿using DoctorAppointmentSystem.Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using DoctorAppointmentSystem.Domain.Entities;
 using DoctorAppointmentSystem.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;

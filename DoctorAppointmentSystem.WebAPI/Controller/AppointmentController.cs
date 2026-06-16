@@ -1,7 +1,5 @@
 ﻿using DoctorAppointmentSystem.Application.DTOs;
 using DoctorAppointmentSystem.Application.Interfaces;
-using DoctorAppointmentSystem.Application.Services;
-using DoctorAppointmentSystem.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -15,7 +13,6 @@ namespace DoctorAppointmentSystem.WebAPI.Controller
         private readonly IAppointmentService AppointmentService;
         private readonly IPatientRepository PatientRepository;
         private readonly IDoctorService DoctorService;
-
         public AppointmentController(IAppointmentService appointmentService, IPatientRepository patientRepository,IDoctorService doctorService)
         {
             AppointmentService = appointmentService;

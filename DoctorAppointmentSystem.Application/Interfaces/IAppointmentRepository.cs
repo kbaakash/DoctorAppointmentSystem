@@ -14,6 +14,5 @@ namespace DoctorAppointmentSystem.Application.Interfaces
         Task AddAsync(Appointment appointment);
         Task<List<Appointment>> GetByPatientId(Guid patientId);
         Task<List<Appointment>> GetByDoctorId(Guid doctorId);
-
     }
 }

@@ -1,4 +1,3 @@
-using DoctorAppointmentSystem.Application;
 using DoctorAppointmentSystem.Application.Interfaces;
 using DoctorAppointmentSystem.Application.Services;
 using DoctorAppointmentSystem.Domain.Entities;
@@ -13,8 +12,6 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 var key = builder.Configuration["JwtSettings:Key"];
@@ -32,14 +29,11 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-
         ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
         ValidAudience = builder.Configuration["JwtSettings:Audience"],
-
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(key) 
         ),
-
         RoleClaimType = ClaimTypes.Role
     };
 });
@@ -82,19 +76,11 @@ builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<ISlotRepository, SlotRepository>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-
-
-//builder.Services.AddScoped<IAppointmentRepository,AppointmentRepository>();
-//builder
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
-//builder.Services.AddScoped<IPatientService, PatientService>();
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

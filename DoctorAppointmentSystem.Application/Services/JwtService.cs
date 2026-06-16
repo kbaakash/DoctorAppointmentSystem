@@ -1,14 +1,9 @@
 ﻿using DoctorAppointmentSystem.Application.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DoctorAppointmentSystem.Application.Services
 {
@@ -37,7 +32,6 @@ namespace DoctorAppointmentSystem.Application.Services
                 expires: DateTime.Now.AddHours(double.Parse(Configuration["JwtSettings:ExpiryInHours"])),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
             );
-
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
